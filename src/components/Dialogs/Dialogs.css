@@ -1,0 +1,39 @@
+.dialogs {
+    height: 800px;
+    background-color: white;
+    width: 800px;
+    display: flex;
+
+}
+
+.dialogs__people{
+    width: 200px;
+    border-right: black;
+    display: block;
+    
+}
+
+.dialogs a{
+    text-decoration: none;
+    font-family: Arial;
+    font-size: 18px;
+    font-weight: 400;
+    color: #1d2129;
+}
+
+
+
+.dialogs__avatar{
+    width: 40px;
+    height: 40px;
+    margin-left: 15px;
+    border-radius: 50%;
+    background-color: black;
+}
+
+.dialogs__messages{
+    background-color: blanchedalmond;
+    width: 600px;
+    color: black;
+    margin-left: 10px;
+}

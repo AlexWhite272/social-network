@@ -1,0 +1,23 @@
+.dialogsItem__info{
+    width: 97%;
+    height: 50px;
+    display:flex;
+    align-items: center;
+    margin:5px;
+    border: 3px solid black;
+}
+
+.dialogsItem__info p{
+    padding-left: 5px; 
+}
+
+
+
+.dialogs__info_act p{
+    
+    border-bottom: 3px solid black;
+    font-style: italic;
+    font-weight: 700;
+    padding-left: 5px; 
+}
+

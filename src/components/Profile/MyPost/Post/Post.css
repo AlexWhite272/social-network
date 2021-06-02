@@ -1,0 +1,28 @@
+.content__post {
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.content__post-img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.content__post-txt{
+    font-size: 18px;
+    padding-left: 15px;
+    text-align: center;
+}
+
+.post__postBlock{
+    width: 600px;
+    border: 3px solid rgba(199, 193, 193, 0.747);
+    /*grid-area: post;*/
+    margin-right: 10px;
+    background-color: white;
+    margin-bottom: 20px;
+  }

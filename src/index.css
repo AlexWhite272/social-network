@@ -1,0 +1,23 @@
+body {
+    background-color: #e9ebee;
+}
+
+.App {
+    margin: 0 auto;
+    padding: 0;
+    display: grid;
+    grid-template-areas: "head head" "appBody appBody";
+    grid-template-rows: 60px 2fr;
+    grid-template-columns: 2fr 10fr;
+    
+}
+
+
+
+.appBody{
+    grid-area: appBody;
+    max-width: 1200px;
+    display: inline-flex;
+    margin: 0 auto;
+}
+

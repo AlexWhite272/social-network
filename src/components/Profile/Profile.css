@@ -1,0 +1,112 @@
+
+
+.profile__header{
+  background-color: white;
+}
+
+.profile__img img{
+  text-align: left;
+    width: 800px;
+    height: 300px;
+    border: 3px solid black;
+}
+
+.profile__button{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.profile__addPost{
+  display: flex;
+  align-items: center;
+}
+
+.profile__fieldAddPost {
+  resize: none;
+  width: 250px;
+  height: 30px;
+  border: 3px solid rgba(199, 193, 193, 0.747);
+  background-color: #f6f7f9;
+}
+
+.profile__butAddPost{
+  width: 90px;
+  height: 25px;
+  background-color: #4267b2;
+  border: none;
+  border-radius: 5px;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 14px;
+  font-weight: 400;
+  margin-left: 10px;
+}
+
+.profile__sendmessage{
+  width: 250px;
+  height: 25px;
+  background-color: #4267b2;
+  border: none;
+  border-radius: 5px;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 14px;
+  font-weight: 400;
+
+
+}
+
+.profile__body{
+  margin-top: 20px;
+  display: flex;
+ /* display: grid;
+  grid-template-areas:
+   "post info" 
+   "post skills"
+   "post newfreind"
+    "post statistic";
+   grid-template-rows: 1fr 1fr;
+   grid-template-columns: 500px 200px;*/
+
+}
+
+.profile__wall{
+  display: inline-block;
+}
+
+
+
+.profile__info{
+  width:160px;
+  /*grid-area: info;*/
+
+
+}
+
+.profile__skils{
+  /*grid-area: skils;*/
+  border: 3px solid rgba(199, 193, 193, 0.747);
+  background-color: white; 
+
+}
+
+.profile__newfreind{
+  /*grid-area: newfreind;*/
+  border: 3px solid rgba(199, 193, 193, 0.747);
+  margin-top: 10px;
+  background-color: white;
+}
+
+.profile__statistic{
+  /*grid-area: statistic;*/
+  border: 3px solid rgba(199, 193, 193, 0.747);
+  margin-top: 10px;
+  background-color: white;
+}
+
+/*Не забыть вынести данные (id, text), добавить кнопку лайков для постов*/

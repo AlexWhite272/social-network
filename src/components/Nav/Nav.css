@@ -1,0 +1,88 @@
+body{
+  padding:0;
+  margin:0;
+}
+
+.nav{
+    display: inline;
+    text-align: left;
+    margin-top: 15px;
+    grid-area: nav;
+
+
+  }
+
+/*.nav__tittle{}*/
+
+.nav__link{
+  padding-bottom: 10px;
+}
+
+.nav__link a{
+  color:#1d2129;
+  text-decoration: none;
+  font-family: Arial;
+  font-size: 18px;
+  font-weight: 400;
+  color: #1d2129;
+  
+
+}
+
+.nav__link_active {
+  background-color: white;
+  padding: 5px 180px 5px 15px;
+  border-radius: 3px;
+}
+
+
+/*account*/
+
+.account__information{
+  margin-right: 15px;
+  margin-top: 15px;
+  display: block;
+
+
+}
+
+.account__avatar{
+  border: 5px solid white;
+}
+
+.account__avatar img{
+  width: 250px;
+  height: 250px;
+
+
+}
+
+.account__nickname{
+  font-size: 0;
+}
+
+.account__nickname h2{
+  width: 250px;
+  
+  font-family: Arial;
+  font-size: 42px;
+  line-height: 33px;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  color: #1d2129;
+  margin-bottom: 0px;
+}
+
+.account__id h4{
+  font-family: Arial;
+  font-size: 28px;
+  line-height: 28px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: #90949c;
+  margin-top: 0px;
+  
+}
+
+
+
