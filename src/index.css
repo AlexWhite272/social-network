@@ -21,3 +21,10 @@ body {
     margin: 0 auto;
 }
 
+
+/* posts={state.profile.posts}
+                messagesData={state.dialogs.messagesData}
+                dialogsData={state.dialogs.dialogsData}
+                addPost={addPost}
+                newPostText = {state.profile.newPostText}
+                updateNewPostText = {updateNewPostText} */

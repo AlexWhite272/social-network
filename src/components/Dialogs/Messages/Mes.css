@@ -1,0 +1,19 @@
+.messages{
+    display:flex;
+    justify-content: flex-end;
+    margin-top: 10px ;
+    margin-right: 5px;
+}
+
+.messages__item{
+    text-align: center;
+    display:block;
+    align-items: center;
+    font-size: 16px;
+    background-color: #fff;
+    border: 1px solid black;
+    border-radius: 10px;
+    max-width: 250px;
+    min-height: 20px;
+    padding: 10px;
+}

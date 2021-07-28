@@ -3,8 +3,8 @@ import './Mes.css';
 
 const Mes = (props) => {
     return(
-        <div>
-            {props.messages}
+        <div className="messages">
+            <p className="messages__item">{props.messages}</p>
         </div>
     )
 }

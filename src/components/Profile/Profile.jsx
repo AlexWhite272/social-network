@@ -1,6 +1,10 @@
 import React from 'react';
 import './Profile.css'
 import Post from './MyPost/Post/Post'
+import { addPostActionCreate, clearActionCreate, updateNewPostActionCreate } from '../../Redux/profile-reducer'
+
+
+
 
 const Profile = (props) => {
 
@@ -10,9 +14,18 @@ const Profile = (props) => {
 
     let addpost = () =>{
             let text = newPostElement.current.value;
-            props.addPost(text);
-            newPostElement.current.value = '';
+            if(text!==""){
+                props.dispatch(addPostActionCreate());
+                props.dispatch(updateNewPostActionCreate(text));
+                props.dispatch(clearActionCreate())
+        }
+    }
+
+    let onPostChange = ()=>{
+        let text = newPostElement.current.value;
+        props.dispatch(updateNewPostActionCreate(text));
         
+
     }
 
     return (
@@ -23,7 +36,8 @@ const Profile = (props) => {
                 </div>
                 <div className="profile__button">
                     <div className="profile__addPost">
-                        <textarea ref={newPostElement} className="profile__fieldAddPost"></textarea>
+                        <textarea ref={newPostElement} className="profile__fieldAddPost" onChange={onPostChange}
+                        value={props.newPostText}></textarea>
                         <button onClick={addpost} className="profile__butAddPost">Add post</button>
                     </div>
                     <button className="profile__sendmessage">Send message</button>
