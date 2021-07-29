@@ -11,8 +11,9 @@ export let rerenderEntireTree = (state) => {
             <App 
                 // dialogs = {store.getState.dialogs}
                 // profile = {store.getState.profile}
-                state = {state}
-                dispatch = {store.dispatch.bind(store)}
+                // state = {state}
+                store={store}
+                // dispatch = {store.dispatch.bind(store)}
             />
         </React.StrictMode>,
         document.getElementById('root')

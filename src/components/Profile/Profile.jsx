@@ -1,7 +1,8 @@
 import React from 'react';
 import './Profile.css'
 import Post from './MyPost/Post/Post'
-import { addPostActionCreate, clearActionCreate, updateNewPostActionCreate } from '../../Redux/profile-reducer'
+
+
 
 
 
@@ -12,23 +13,24 @@ const Profile = (props) => {
     
     let newPostElement = React.createRef();
 
-    let addpost = () =>{
+    let onAddpost = () =>{
             let text = newPostElement.current.value;
+           
             if(text!==""){
-                props.dispatch(addPostActionCreate());
-                props.dispatch(updateNewPostActionCreate(text));
-                props.dispatch(clearActionCreate())
+                props.addPost(text)
+        //         props.dispatch(addPostActionCreate());
+        //         props.dispatch(updateNewPostActionCreate(text));
+        //         props.dispatch(clearActionCreate())
         }
     }
 
     let onPostChange = ()=>{
         let text = newPostElement.current.value;
-        props.dispatch(updateNewPostActionCreate(text));
-        
-
+        props.updateNewPostText(text);
     }
 
     return (
+        
         <div className='profile'>
             <div className="profile__header">
                 <div className='profile__img'>
@@ -38,7 +40,7 @@ const Profile = (props) => {
                     <div className="profile__addPost">
                         <textarea ref={newPostElement} className="profile__fieldAddPost" onChange={onPostChange}
                         value={props.newPostText}></textarea>
-                        <button onClick={addpost} className="profile__butAddPost">Add post</button>
+                        <button onClick={onAddpost} className="profile__butAddPost">Add post</button>
                     </div>
                     <button className="profile__sendmessage">Send message</button>
                     
@@ -46,9 +48,7 @@ const Profile = (props) => {
             </div>
             <div className="profile__body">
                 <div className="profile__wall">
-                    
                     {postElements}
-
                 </div>
 
                 <div className="profile__info">
