@@ -26,10 +26,10 @@ function App(props) {
                 </div>
                 <div className="content" >
                     <Route path='/profile' render={() => <ProfileContainer 
-                        store={props.store}
+                        // store={props.store}
                     />} />
                     <Route path='/dialogs' render={() => <DialogsContainer   
-                        store={props.store}                                         
+                        // store={props.store}                                         
                     />}/>
                     <Route path='/music' component={Music} />
                     <Route path='/news' component={News} />

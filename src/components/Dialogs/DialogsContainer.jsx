@@ -1,28 +1,35 @@
 import React from 'react';
 import {  SendMes, updateNewMessagesActionCreate } from '../../Redux/dialogs-reducer';
+import StoreContext from '../../StoreContext';
 import Dialogs from './Dialogs';
 ;
 
 
 
 const DialogsContainer = (props) => {
-    let state = props.store.getState()
+    
+    return  (
+        <StoreContext.Consumer>{
+            (store)=>{
+                let state = store.getState()
 
-    const updateNewMessages = (text)=>{ 
-        props.store.dispatch(updateNewMessagesActionCreate(text))
-    }
-    const sendMes = (event)=>{
-        
-        props.store.dispatch(SendMes(event))
-    }
+                const updateNewMessages = (text)=>{ 
+                    store.dispatch(updateNewMessagesActionCreate(text))
+                }
+                const sendMes = (event)=>{
+                    store.dispatch(SendMes(event))
+                }
 
-    return  <Dialogs 
-        updateNewMessages = {updateNewMessages}
-        sendMes={sendMes}
-        messagesData={state.dialogs.messagesData}
-        dialogsData={state.dialogs.dialogsData}
-        newMessagesText={state.dialogs.newMessagesText}
-    />
+                return  <Dialogs 
+                        updateNewMessages = {updateNewMessages}
+                        sendMes={sendMes}
+                        messagesData={state.dialogs.messagesData}
+                        dialogsData={state.dialogs.dialogsData}
+                        newMessagesText={state.dialogs.newMessagesText}
+                    />}
+            }</StoreContext.Consumer>
+            
+    )
     
 };
 
